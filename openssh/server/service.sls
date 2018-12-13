@@ -5,7 +5,7 @@ openssh_server_packages:
   pkg.latest:
   - names: {{ server.pkgs }}
 
-{%- if server.banner is defined %}
+{%- if server.banner_managed is defined %}
 
 {# CIS 5.2.15 requires Banner option configured. It also proposes
    file name '/etc/issue.net' as a solution, if Banner is not configured.
